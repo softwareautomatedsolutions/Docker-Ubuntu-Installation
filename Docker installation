@@ -1,0 +1,14 @@
+When setting up Docker using AWS, choose the AMI ubuntu and at least T2 Medium.
+Note that Redhat is not supported.
+
+We can run this installation as a script by vi dockerinstall.sh
+
+#!/bin/bash
+sudo apt update -y
+sudo apt install docker.io -y
+sudo service docker start
+sudo docker info
+sudo hostnamectl set-hostname docker
+#sudo usermod -aG docker ubuntu
+sudo su – ubuntu
+
